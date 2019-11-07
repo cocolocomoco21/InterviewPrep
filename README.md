@@ -1,3 +1,18 @@
+# InterviewPrep
+Welcome to my interview prep repo. This repo will (eventually - it's still in progress) contain everything I use for fundamental interview prep for technical software interviews.
+
+## Table of Contents
+(This ToC will be updated as I write out the repo.)
+
+### Chapter 1: Data Structures
+#### I: Arrays
+
+
+-----
+## Roadmap
+Below is tentative plan for the repo and not really part of the README as it matters to you.
+
+\
 Interview Prep:
 
 Chapter 1: Data Structures
