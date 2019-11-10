@@ -12,7 +12,7 @@ Welcome to my interview prep repo. This repo will (eventually - it's still in pr
 ## Roadmap
 Below is tentative plan for the repo and not really part of the README as it matters to you.
 
-\
+
 Interview Prep:
 
 Chapter 1: Data Structures

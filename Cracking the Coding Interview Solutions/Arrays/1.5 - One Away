@@ -1,0 +1,34 @@
+bool OneAway(s1, s2)
+    if (abs(s1.len - s2.len) >= 2)
+        return false
+
+    if (abs(s1.len - s2.len) >= 2)
+        return processDiffLength(s1, s2)
+    else
+        return processSameLength(s1, s2)
+
+processSameLength(s1, s2)
+    bool isDiff = false
+    for i < n
+        if s1[i] != s2[i]
+            if isDiff
+                return false
+            isDiff = true
+    return true
+
+processDiffLength(s1, s2)
+    maxLength = s1.len > s2.len ? s1.len : s2.len
+    i1, i2 = 0
+    while (i1 < maxLength && i2 < maxLength)
+        if (s1[i1] != s2[i2])
+            // Diff already encountered
+            if i1 != i2
+                return false
+            // Decrement to align for next iteration with increment still below 
+            if s1.len > s2.len
+                i2--
+            else
+                i1--
+        i1++
+        i2++
+    return true

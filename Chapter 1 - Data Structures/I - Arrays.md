@@ -32,7 +32,7 @@ O(n) because you must traverse, in worst case, all elements to find the element 
 #
 ## Example uses
 - Hash table: map keys to values, stored in array. Use hash function to derive index, and store value at that index. Lookup is then constant.
-- Dynamic/resizeable arrays - essentially Lists (e.g. ArrayList)
+- Dynamic/resizeable arrays - essentially Lists (e.g. ArrayList). O(1) access, amortized O(1) insertion
 - Binary search tree
 
 #

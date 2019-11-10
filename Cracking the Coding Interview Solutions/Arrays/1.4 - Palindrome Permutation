@@ -1,0 +1,37 @@
+Given string, write function to check if it is a permutation of a palindrome
+
+By definition, palindrome will have an even amount of all characters, except possibly one, which will be odd (let's call this the pivot character). There is a second case where the pivot character is also duplicated (e.g. deed).
+
+Approach is to keep count of all characters. If two characters appear an odd amount, then it is not a palindrome permutation.
+
+Algorithm:
+
+isPalindromePermutation(string input):
+    int letterCount = int[128]         // assuming ASCII
+    
+    for each char c in input:
+        letterCount[c - 'a']++
+    
+    int numOdd = 0
+    for each int val in letterCount:
+        if val % 2 == 1
+            numOdd++
+        if numOdd >= 2
+            return false
+    
+    return true
+
+Optimized:
+
+isPalindromePermutation(string input):
+    int letterCount = int[128]         // assuming ASCII
+    int numOdd = 0;
+
+    for each char c in input:
+        letterCount[c - 'a']++
+        if (letterCount[c - 'a'] % 2 == 1)
+            numOdd++
+        else
+            numOdd--
+    
+    return numOdd <= 1
