@@ -4,7 +4,7 @@ Arrays provide a simple method of storing data in a table-like structure in memo
 
 #
 ## Time Complexity (worst case)
-**Lookup**: O(1) (amortized)
+**Access**: O(1) (amortized)
 
 Depending on number of collisions, worst case runtime is O(n) lookup. In the typical and best case, O(1).
 
