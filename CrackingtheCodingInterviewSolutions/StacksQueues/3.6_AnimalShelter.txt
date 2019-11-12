@@ -1,0 +1,13 @@
+Animal shelter - can adopt either oldest (w.r.t arrival time) dog or oldest cat, or oldest animal. Create data structures needed to maintain this system
+
+Have AnimalAdoption class (or AnimalQueue, that kind of a thing) which maintains two queues:
+1) Queue for dogs, DogQueue
+2) Queue for cats, CatQueue
+
+Have an Animal interface which Dog and Cat classes both implement. This interface can have attributes such as
+- ID (or some unique identifier for the animal)
+- Timestamp
+- anything else that is common or useful across both dogs and cats (e.g. name, breed, etc.)
+
+Dequeueing dogs and cats is trivial. Just call the dequeue function for the respective queue.
+The crux is the dequeueAny() function. This is why you need a timestamp. Simply do a peek() on both queues, and dequeue and return the animal that has the older timestamp.

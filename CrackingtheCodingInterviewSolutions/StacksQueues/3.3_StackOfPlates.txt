@@ -1,0 +1,33 @@
+SetOfStacks:
+    Stack<Stack> stacks
+    Stack current
+    int maxCapacity
+
+    public SetOfStacks(int maxCapacity)
+        this.maxCapacity = maxCapacity
+
+    E pop():
+        if current == null || current.IsEmpty()
+            if stacks == null || stacks.IsEmpty()
+                throw EmptyStackException()     // case: completely empty
+            else
+                current = stacks.pop()          // case: only current stack empty
+        return current.pop()
+    
+    void push(E item):
+        if current == null
+            current = new Stack()               // case: completely empty
+        else if current.IsFull()
+            stacks.push(current)                // case: only current stack empty
+            current = new Stack()
+        current.push(item)
+
+    
+    // The IsFull method would either reside in the Stack class, or there'd be
+    // some helper in this class. The crux is just comparing the maxCapacity to
+    // the size of the stack. That is omitted here because it would be too
+    // "in the weeds" and is mostly boilerplate
+
+
+// For popAt() function, use ArrayList rather than Stack to hold the stacks. 
+// It'd be easier to access

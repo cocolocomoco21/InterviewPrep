@@ -1,0 +1,22 @@
+What is meant by single array? If it is single array "object", I would consider this to allow multi-dimensional arrays. If it is meant a single, one-dimensional array, I would take this to mean that.
+
+The difference is that a one-dimensional array will be a lot more work and maintenance in the doubling/expanding when the stack is full. Multi-dimensional would be a lot cleaner and better maintained. 
+
+Multi-dimensional:
+Have one row with three columns
+Manage each column on its own, so if one stack is significantly larger than the others, you don't need to mess with the others to maintain.
+Adding/doubling algorithm for a row (e.g. row 0) looks like this:
+    arr[0] = new int[100]
+    ...
+    int[] expand = new int[arr[0].length * 2]
+    for i < arr[0].length
+        expand[i] = arr[0][i]
+    arr[0] = expand
+
+---
+
+One-dimensional:
+The general idea is split the array into thirds, and keep each third as its own stack. Effectively, you're managing the memory space for each stack in a contiguous block.
+The concern is when a stack is full, how do you double?
+The first answer would be to double each block.
+This doesn't take in to account any possible heuristics you could have to optimize this costly doubling operation. For instance, if all stacks start with size 100, and one stack only has 2 elements, but another is full, the smaller stack doesn't need to be duplicated. 
