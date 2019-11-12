@@ -1,0 +1,22 @@
+Can be either of two: recursive or iterative
+
+Iterative: iterate over all elements. Get the count. Iterative n-k times again, to find the kth to last element.
+
+Recursive:
+
+Node FindKth(Node head, int k)
+    return Process(head, k).left
+
+Tuple<Node, int> Process (Node n, int k)
+    if (n.next == null)
+        if (k == 1)
+            return <n, 1>
+        return <null, 1>
+    
+    val = Process(n.next, k)
+    if (val.left != null)
+        return val
+    val.right++
+    if (val.right == k)
+        val.left = n
+    return val

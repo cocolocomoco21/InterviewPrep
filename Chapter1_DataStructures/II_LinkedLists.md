@@ -15,7 +15,7 @@ Insertion is constant time due to having a head or tail pointer. Adding at this 
 
 **Deletion**: O(1)
 
-Deletion is constant time, similarly to insertion, because of head or tail pointers. This allows access to one node (though not one specific node - that requires a search) in constant time.
+Deletion is constant time, similarly to insertion, because of head or tail pointers. This allows access to one node (though not one specific node - that requires a search) in constant time. Since elements are not required to be shifted (like an array), constant.
 
 **Search**: O(n)
 

@@ -1,0 +1,63 @@
+Implement a function to check if a linked list is a palindrome
+
+Brute force:
+1)  Iterate once and find count of linked list
+    For each i < n/2
+        Navigate to the ith, n-ith element
+        Compare them
+        if not equal
+            return false
+    return true
+2)  Literally make a reversal of this linked list
+    Keep a count while you're at it
+    navigate from i to n/2 for each linked list, comparing
+    if not equal, return false. else when you're done, return true
+
+-----
+
+More elegant: Recursion
+
+int size = 0
+int itr = 0;
+
+<Node, bool> IsPalindrome(Node n):
+    size++
+    if n.next != null
+        <returnedNode, isPalindrome> ret = IsPalindrome(n.next)
+        if ret.right == false || ret.left == null
+            ret.left = null
+            return ret
+    else
+        return <n, true>;
+
+    currNode = head
+    for i=0 < itr
+        currNode = currNode.Next
+
+    if currNode.data != returnedNode.data
+        return <returnedNode, false>
+    
+    itr++
+    if itr > floor(size/2)
+        return <null, true>
+    
+
+/*
+if last node 
+    return node
+
+compare 0 to nth
+compare 1 to n-1
+compare 2 to n-2
+...
+
+if last node
+    return node
+
+for i < floor(n/2)
+    node = IsPalindrome(n)
+
+
+*/
+
+
