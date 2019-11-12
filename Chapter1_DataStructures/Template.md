@@ -5,21 +5,21 @@
 
 #
 ## Time Complexity (worst case)
-**Access**: {val}
+**Access (at a given location)**: {val}
 
 {explanation}
 
 **Insertion**: {val}
 
-{explanation
+{explanation}
 
 **Deletion**: {val}
 
-{explanation
+{explanation}
 
-**Search**: {val}
+**Search (to find if element exists)**: {val}
 
-{explanation
+{explanation}
 
 #
 ## Space Complexity

@@ -7,6 +7,7 @@ Welcome to my interview prep repo. This repo will (eventually - it's still in pr
 ### Chapter 1: Data Structures
 #### I: Arrays
 #### II: Linked Lists
+#### III: Stacks
 
 
 -----
