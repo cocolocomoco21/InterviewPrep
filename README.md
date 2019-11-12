@@ -8,6 +8,7 @@ Welcome to my interview prep repo. This repo will (eventually - it's still in pr
 #### I: Arrays
 #### II: Linked Lists
 #### III: Stacks
+#### IV: Queues
 
 
 -----
