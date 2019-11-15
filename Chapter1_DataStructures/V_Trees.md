@@ -88,6 +88,8 @@ In the worst case, a binary search tree is a direct shot down and is not full at
 - One rule for BST: left subtree must always contain elements less than the current node, and right subtree must always contain elements greater than the current node, for all subtrees within the tree. 
 -  Not necessarily full (zero or two children for all), complete (full except last level), or perfect (full and complete). This leads to a tricky O(n) worst case complexity in the case of a tree which is straight down vertically, in a line.
 - Advantage: if tree is reasonably balanced (more full than linear), insert, lookup, and delete are all O(log n). Opposed to linked list, where lookup can be O(1), but lookup and delete are O(n).
+- Red-Black trees - guaranteed to have O(log n) lookup, insert, and delete. This is because it uses a whole lot of rules which guarantee balance, which is average case for any tree (hence why O(log n) but worst case O(n)).
+    - Other trees that guarantee O(log n): AVL trees, 2-4 trees, B trees
 
 #
 ## Example uses
