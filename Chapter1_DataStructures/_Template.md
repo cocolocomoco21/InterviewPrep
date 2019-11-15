@@ -3,6 +3,10 @@
 
 {Short overview}
 
+## More Details and Definitions
+
+{if needed}
+
 #
 ## Time Complexity (worst case)
 **Access (at a given location)**: {val}
