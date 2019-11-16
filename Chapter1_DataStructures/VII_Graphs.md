@@ -17,6 +17,18 @@ A lot of the terminology is self-explanatory and I've covered it before, so this
 - **Weighted** graph - graph where edges have a value associated with them.
 - **Connected** graph - undirected graph has a path from every node to another node. There are no "islands".
 
+## Representing Graphs in Programming
+Adjacency List:
+- Every vertex (node) stores a list of adjacent vertices.
+    - Directed graph: the current node represents the source, and the list represents targets.
+    - Undirected graph: the list will be duplicated. I.e. `(a, b)` will appear in `a`'s list, as well as `b`'s list.
+- Can use array/hash table, but typically use simple Graph, Node classes.
+
+Adjacency Matrix:
+- NxN (N = number of nodes) matrix where true at `[i][j]` represents an edge from node `i` to node `j`.
+    - Directed: keep one axis as source, one as target. Not necessarily symmestrical.
+    - Undirected graph: will be symmetrical.
+
 #
 ## Time Complexity (worst case)
 **Access (at a given location)**: {val}
@@ -33,8 +45,13 @@ A lot of the terminology is self-explanatory and I've covered it before, so this
 
 **Search (to find if element exists)**: {val}
 
-- **Depth-first search** - graph traversal that favors depth over breadth. Visit one child, it's immediate children, recursively. Aka drill down on one child, its child, its child, etc. until you get to a leaf. Then return and visit the parents next child, etc.
+- **Depth-first search** - graph traversal that favors depth over breadth. Visit one child, it's immediate children, recursively. Aka drill down (deep) on one child, its child, its child, etc. until you get to a leaf. Then return and visit the parents next child, etc.
+    - Pre-order traversal
+    - Visit a node, mark as visited. For each child/adjacent node, visit (pre-order). Stack not required, but can add "to-visit" nodes to the stack.
 
+- **Breadth-first search** - graph traversal that favors breadth over depth. Visit one node, then all of its children. Once all children have been visited, visit the next "level" of children.
+    - Level-order traversal
+    - Visit a node, add its children to a queue. Pop node off queue, add its children to queue, and repeat.
 #
 ## Space Complexity
 
