@@ -1,0 +1,30 @@
+Given directed graph, algorithm to find whether route between two nodes
+
+Can do either BFS or DFS.
+
+BFS:
+
+bool RouteBetweenNodes(Node n1, Node n2)
+    // Start with node 1
+    if n1.adjacent == null/empty
+        return false
+    
+    if n1 == n2
+        return true
+    
+    queue = new NodeQueue<Node>()
+    queue.add(n1)
+    
+    while (!queue.IsEmpty)
+        current = queue.pop()
+        current.IsVisited = true
+
+        for each Node n : current.adjacent:
+            if !n.IsVisited && !queue.contains(n)
+                // Early exist. Can check when visiting, but this
+                // reduces some processing
+                if (n == n2)
+                    return true
+                queue.add(n)
+
+    return false

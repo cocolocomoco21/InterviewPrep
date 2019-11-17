@@ -1,0 +1,30 @@
+Implement a function to check if a binary tree is a binary search tree
+
+Rules of a BST:
+1) 0-2 children (but given a binary tree, we know that this is true)
+2) left children <= n < right children, for all nodes n
+Can check easily if immediate children uphold BST. But for a subtree (and more generally, a tree) is harder
+    -> Need to track the max, min that a value can be within a subtree
+
+
+Algorithm:
+for each node, track down the min and max a node can have, according to above rule
+if outside of range, return false to the top. else, once navigated through entire graph (DFS), return true
+
+Implementation:
+
+ValidBST(Node root)
+    return IsValidBST(root, Int.MIN, Int.MAX)
+
+bool IsValidBST(Node n, int min, int max)
+    if n == null
+        return true
+    
+    if n.value > max || n.value < min
+        return false
+    
+    // DFS
+    if !IsValidBST(n.left, min, n.value) ||  IsValidBST(n.right, n.value + 1, max)
+        return false
+
+    return true

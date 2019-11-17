@@ -1,0 +1,50 @@
+Implement function to check if binary tree is balanced. Balanced = heights of the two subtrees of any node never differ by more than one.
+
+Balanced: For all leaves, the depth of them is within one.
+Effectively, find all depths. Ensure the difference between them is always 1 or 0.
+Can do BFS and when you encounter a leaf, track that leaf's depth/height.
+
+Approach:
+- Keep list of depths
+- if complete BFS and only one depth, return true
+- when inserting second depth
+    - if diff between that and first one is > 1, return false
+    - if not, continue processing. if complete processing, return true
+- if inserting third, return false
+
+
+Implementation (actually decided to use DFS not BFS to avoid having to also track depth in an object or Node - this can be done too and probably would be clean but requires me to specify a Node class too):
+
+
+List<int> depths
+
+bool CheckBalanced(Node root)
+    if root == null
+        // Doesn't exist
+        return false
+    return CheckBalancedDepth(root, 1)
+
+
+bool CheckBalancedDepth(Node root, int depth)
+    if root.children.isEmpty
+        // Do leaf logic
+        if depths.size == 2 && !depths.contains(depth)
+            // Pigeonhole principle - if three entries, can't have two that are off by 1. Two are guaranteed to be off by at least two
+            return false
+        else if depths.size == 1 && Math.abs(depths.get(0)-depth) > 1
+            // if only two depths, but off by greater than 1
+            return false
+        
+        // Add depth
+        if !depths.contains(depth)
+            depths.add(depth)
+        return true
+
+    for each Node n in root.children
+        bool isBalanced = CheckBalanced(n, depth + 1)
+        if !isBalanced
+            return false
+
+    
+
+    

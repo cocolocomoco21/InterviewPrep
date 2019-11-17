@@ -1,1 +1,44 @@
 Given sorted (increasing order) array with unique ints, write algorithm to create binary search tree with minimal height.
+
+Know:
+    1) BST has left child <= n < right. Since unique, left < n < right
+    2) Want to use sorted nature of array to our advantage. Work is already done, so use it.
+
+So:
+
+// Member variable to avoid constant memory passing
+int[] arr
+
+MinTree(int[] input)
+    this.arr = input
+    if arr.size == 0
+        return null
+    else if arr.size == 1
+        return Node(arr[0])
+    return BuildMinBST(0, arr.size - 1)
+
+BuildMinBST(int startIndex, int endIndex)
+    // some error/bounds checking here
+    if (endIndex-startIndex == 0)
+        // do some edge case
+    else if (endIndex - startIndex == 1)
+        // do some other edge case
+
+    // meat of algo:
+    int midpoint = (endIndex + startIndex) / 2
+    Node node = new Node(arr[midpoint])
+    node.Left = BuildMinBST(startIndex, midpoint)
+    node.Left = BuildMinBST(midpoint, endIndex)
+
+-------
+
+CtCI improves on this algo with using the decremented and incremented indexes
+I.e.
+if (end < start)
+    return null
+int midpoint = (start + end) / 2
+n.left = (createMinimalBST(start, mid - 1))
+n.right = (createMinimalBST(mid + 1, end))
+return n
+
+This provides a more elegant solution
