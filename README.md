@@ -1,15 +1,26 @@
 # InterviewPrep
 Welcome to my interview prep repo. This repo will (eventually - it's still in progress) contain everything I use for fundamental interview prep for technical software interviews.
 
-## Table of Contents
-(This ToC will be updated as I write out the repo.)
+This repo contains the general interview topics: data structures, algorithms, time complexity, etc. Further, it contains more tailored material, such as OOP and design, software engineering practices and processes, and more technical topics like databases, OS, networks, and AI. Lastly, it contains some solutions to Cracking the Coding Interview.
 
-### Chapter 1: Data Structures
+# Table of Contents
+(This ToC is updated as I write out the repo. Eventually I'll even add links for these sections)
+
+## Chapter 1: Data Structures
 #### I: Arrays
 #### II: Linked Lists
 #### III: Stacks
 #### IV: Queues
+#### V: Trees
+#### VI: Heaps and Priority Queues
+#### VII: Graphs
 
+#
+### Cracking the Coding Interview Solutions
+#### I: Arrays
+#### II: Linked Lists
+#### III: Stacks and Queues
+#### IV: Trees and Graphs
 
 -----
 ## Roadmap
