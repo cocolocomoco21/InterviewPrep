@@ -9,24 +9,18 @@ public class Main {
     public static void main(String[] args) {
         MedianFinder medianFinder = new MedianFinder();
 
-        medianFinder.addNum(1);
+        medianFinder.addNum(12);
         System.out.println(medianFinder.findMedian());
 
 
-        medianFinder.addNum(2);
-        medianFinder.addNum(3);
+        medianFinder.addNum(10);
         System.out.println(medianFinder.findMedian());
 
-        medianFinder.addNum(8);
+        medianFinder.addNum(13);
         System.out.println(medianFinder.findMedian());
 
-        medianFinder.addNum(8);
-        System.out.println(medianFinder.findMedian()); // 3
-
-        medianFinder.addNum(4);
-        medianFinder.addNum(6);
-        medianFinder.addNum(1);
-        System.out.println(medianFinder.findMedian()); // 1 1 2 3 4 6 8 8
+        medianFinder.addNum(11);
+        System.out.println(medianFinder.findMedian());
     }
 }
 
@@ -46,9 +40,8 @@ class MedianFinder {
         // Add num into heaps according to value
         if (this.rightSide.isEmpty() || num >= this.rightSide.peek()) {
             rightSide.offer(num);
-        } else if (this.leftSide.isEmpty() || num < this.leftSide.peek()) {
-            this.leftSide.offer(num);
         } else {
+            this.leftSide.offer(num);
         }
 
         this.itemCount++;
