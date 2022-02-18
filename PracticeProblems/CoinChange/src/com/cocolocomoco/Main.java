@@ -6,14 +6,14 @@ import java.util.stream.Collectors;
 public class Main {
 
     public static void main(String[] args) {
-        int[] coins = new int[] {186,419,83,408};
-        int amount = 6249;
+//        int[] coins = new int[] {186,419,83,408};
+//        int amount = 6249;
 
-//        int[] coins = new int[] {1,2,5};
-//        int amount = 100;
+//        int[] coins = new int[] {1, 2, 5};
+//        int amount = 11;
 
-//        int[] coins = new int[] {1, 4, 6};
-//        int amount = 8;
+        int[] coins = new int[] {1, 4, 6};
+        int amount = 8;
 
         Solution solution = new Solution();
 //        SolutionII solution = new SolutionII();
@@ -59,11 +59,11 @@ class SolutionII {
 
 class Solution {
     private HashMap<Integer, Integer> mapRemainingToLeastCoins;
-    private TreeSet<Integer> coinsSet;
+    private HashSet<Integer> coinsSet;
 
     public Solution() {
         this.mapRemainingToLeastCoins = new HashMap<>();
-        this.coinsSet = new TreeSet<Integer>(Collections.reverseOrder());
+        this.coinsSet = new HashSet<Integer>();
     }
 
     public int coinChange(int[] coins, int amount) {
@@ -71,43 +71,41 @@ class Solution {
             return 0;
         }
 
-        // Populate set for constant time lookup. Use TreeSet to ensure descending-sorted order for optimal efficiency.
+        // Populate set for constant time lookup.
         this.coinsSet.clear();
         for (int coin: coins) {
             this.coinsSet.add(coin);
         }
 
-        int result = lookup(amount, 0);
-        return result == Integer.MAX_VALUE ? -1 :result;
+        int result = lookup(amount);
+        return result;
     }
 
-    private int lookup(int remainingAmount, int numCoins) {
+    private int lookup(int remainingAmount) {
         if (remainingAmount < 0) {
             return -1;
         }
 
         // Return if existing already
-        if (mapRemainingToLeastCoins.containsKey(remainingAmount)) {
-            return mapRemainingToLeastCoins.get(remainingAmount);
+        if (this.mapRemainingToLeastCoins.containsKey(remainingAmount)) {
+            return this.mapRemainingToLeastCoins.get(remainingAmount);
+        }
+
+        if (this.coinsSet.contains(remainingAmount)) {
+            this.mapRemainingToLeastCoins.put(remainingAmount, 1);
+            return 1;
         }
 
         int min = Integer.MAX_VALUE;
-        for (Integer coin: coinsSet) {
-            int result;
-            if (coinsSet.contains(remainingAmount)) {
-                // Found viable total coin count. Use this below
-                return 1;
-            } else {
-                // No viable count. Call again to try again
-                result = lookup(remainingAmount - coin, numCoins + 1);
-            }
-
-            if (result <= min && result != -1) {
+        for (Integer coin: this.coinsSet) {
+            // No viable count. Call again to try again
+            int result = lookup(remainingAmount - coin) ;
+            if (result < min && result != -1) {
                 min = result + 1;
             }
         }
 
-        mapRemainingToLeastCoins.put(remainingAmount, min == Integer.MAX_VALUE ? -1 : min);
-        return mapRemainingToLeastCoins.getOrDefault(remainingAmount, -1);
+        this.mapRemainingToLeastCoins.put(remainingAmount, min == Integer.MAX_VALUE ? -1 : min);
+        return this.mapRemainingToLeastCoins.getOrDefault(remainingAmount, -1);
     }
 }
