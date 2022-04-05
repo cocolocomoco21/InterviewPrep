@@ -73,8 +73,10 @@ class Solution {
 
         // Populate set for constant time lookup.
         this.coinsSet.clear();
+        this.mapRemainingToLeastCoins.clear();
         for (int coin: coins) {
             this.coinsSet.add(coin);
+            this.mapRemainingToLeastCoins.put(coin, 1);
         }
 
         int result = lookup(amount);
@@ -89,11 +91,6 @@ class Solution {
         // Return if existing already
         if (this.mapRemainingToLeastCoins.containsKey(remainingAmount)) {
             return this.mapRemainingToLeastCoins.get(remainingAmount);
-        }
-
-        if (this.coinsSet.contains(remainingAmount)) {
-            this.mapRemainingToLeastCoins.put(remainingAmount, 1);
-            return 1;
         }
 
         int min = Integer.MAX_VALUE;

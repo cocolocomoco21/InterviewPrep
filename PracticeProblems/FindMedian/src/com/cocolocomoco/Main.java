@@ -21,7 +21,7 @@ public class Main {
 
         medianFinder.addNum(11);
         System.out.println(medianFinder.findMedian());
-    }
+        }
 }
 
 class MedianFinder {

@@ -1,4 +1,4 @@
-###Problem
+### Problem
 You are given an integer array coins representing coins of different denominations and an integer amount representing a total amount of money.
 
 Return the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return -1.
@@ -7,7 +7,7 @@ You may assume that you have an infinite number of each kind of coin.
 
 https://leetcode.com/problems/coin-change/
 
-###Approach
+### Approach
 
 Dynamic programming. Create a set of coins for constant lookup. Store the known lowest number of coins for a given remainingAmount in a map. Recursively (like DFS)
 find the lowest number of coins for a given remainingAmount, which gets constant time lookup for future operations. After exhausting all potential coin combinations
