@@ -22,9 +22,9 @@ public class Main {
 //        List<Float> prices = Arrays.asList(27.32f, 23.13f, 21.25f, 18.00f, 15.50f);
 
         // Expected: 2.0
-        int n = 150;
-        List<Integer> instances = Arrays.asList(25, 50, 100);
-        List<Float> prices = Arrays.asList(5.0f, 4.0f, 3.0f);
+//        int n = 150;
+//        List<Integer> instances = Arrays.asList(25, 50, 100);
+//        List<Float> prices = Arrays.asList(5.0f, 4.0f, 3.0f);
 
         // Case: extrapolate smaller
         // Expected: 25
@@ -37,6 +37,12 @@ public class Main {
 //        int n = 75;
 //        List<Integer> instances = Arrays.asList(25, 50, 100);
 //        List<Float> prices = Arrays.asList(5.0f, 4.0f, 3.0f);
+
+        // Case: only one number
+        // Expected: 50.0
+        int n = 25;
+        List<Integer> instances = Arrays.asList(1);
+        List<Float> prices = Arrays.asList(2.0f);
 
 
 ////////// RUN CODE ////////////
