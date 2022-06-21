@@ -1,19 +1,20 @@
 package com.cocolocomoco;
 
-
 import java.util.*;
-
 
 public class Main {
 
     public static void main(String[] args) {
-        Solution soln = new Solution();
+//        Solution soln = new Solution();
+//        int[] nums = new int[] {-3, 4, 3, 90};
+//        int target = 0;
+//        int[] res = soln.twoSum(nums, target);
+//        System.out.println(res[0] + " " + res[1]);
 
+        Solution2 solution2 = new Solution2();
         int[] nums = new int[] {-3, 4, 3, 90};
-        int target = 0;
-
-        int[] res = soln.twoSum(nums, target);
-
+        int target = 93;
+        int[] res = solution2.twoSum(nums, target);
         System.out.println(res[0] + " " + res[1]);
     }
 }
@@ -39,5 +40,21 @@ class Solution {
         }
 
         return res;
+    }
+}
+
+class Solution2 {
+    public int[] twoSum(int[] nums, int target) {
+        HashMap<Integer, Integer> mapRemainingToIndex = new HashMap<>();
+
+        for (int i = 0; i < nums.length; i++) {
+            if (mapRemainingToIndex.containsKey(nums[i])) {
+                return new int[] { mapRemainingToIndex.get(nums[i]), i};
+            }
+
+            mapRemainingToIndex.put(target - nums[i], i);
+        }
+
+        return null;
     }
 }
