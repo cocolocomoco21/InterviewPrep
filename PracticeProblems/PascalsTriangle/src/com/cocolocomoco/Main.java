@@ -11,7 +11,7 @@ public class Main {
 //        int numRows = 1;
 //        List<List<Integer>> result = solution.generate(numRows);
 //        System.out.println(result.toString());
-        
+
         Solution2 solution2 = new Solution2();
         int numRows = 6;
         List<List<Integer>> result = solution2.generate(numRows);
