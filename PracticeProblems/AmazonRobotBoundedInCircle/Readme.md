@@ -1,9 +1,9 @@
-###Problem
+### Problem
 Is a robot contained in a circle, given moveset "turn left", "turn right", "move forward"
 
 https://leetcode.com/problems/robot-bounded-in-circle/
 
-###Approach
+### Approach
 We know that all rectangles (including squares) or line segments can be bounded by a circle. Because each turn is 90 degrees
 (i.e. left or right), we know that if the robot makes a rectangle, it cannot occur in _more_ than 4 turns. Therefore,
 if we let the robot repeat four cycles of it's movement and it returns to the origin, we know that it makes a rectangle,
