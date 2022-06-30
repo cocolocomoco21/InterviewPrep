@@ -1,28 +1,32 @@
 # Linked Lists
 ## Overview
 
-Linked list is a data structure which uses nodes, which contain data and pointers, in order to structure a sequence of data in, well, a linked list of this data. These nodes, connected by pointers, can point to the next node, previous node, both; you can have a head and tail pointer, etc. 
+Linked lists are a data structure that represent a sequence of nodes. 
+
+Nodes are comprised of data and pointers. These nodes, connected by pointers, can point to the next node, previous node, or both; you can have a head and tail pointer, etc.  
 
 #
 ## Time Complexity (worst case)
-**Access**: O(n)
+**Access/Search/Lookup**: O(n)
 
 To find an item in a linked list, in the worst case, you must traverse the entire list (assuming head and no tail). With a tail pointer included, the worst case is an item in the middle of the list, which would effectively be O(n/2), which is O(n) still.
 
-**Insertion**: O(1)
+**Insert (at specific)**: O(n)
+
+Must traverse up to n elements to insert at specific "index", so O(n). If head and tail, worst case O(n/2) -> O(n). 
+
+**Append/Prepend (at beginning/end)**: O(1)
 
 Insertion is constant time due to having a head or tail pointer. Adding at this point, since there is no traversing, is constant.
 
-**Deletion**: O(1)
+**Deletion**: O(n)
 
-Deletion is constant time, similarly to insertion, because of head or tail pointers. This allows access to one node (though not one specific node - that requires a search) in constant time. Since elements are not required to be shifted (like an array), constant.
-
-**Search**: O(n)
-
-Search is linear time because of the possible requirement to traverse the entire n-lengthed list to find the element.
+Must traverse up to n elements to find element to delete, so O(n). If head and tail, worst case O(n/2) -> O(n). 
 
 #
 ## Space Complexity
+
+O(n) due to n elements.
 
 #
 ## Distinguishing Features
@@ -33,9 +37,23 @@ Search is linear time because of the possible requirement to traverse the entire
     - Doubly linked list point to both next and previous nodes, and can be traversed in either direction. 
 
 #
+## Strengths and Weaknesses
+
+**Strengths**:
+- Fast operations at the ends (insert/delete) - O(1)
+- Flexible size - dynamically just keep pointing to next elements
+
+**Weaknesses**:
+- Costly lookups
+- Costly non-end operations (delete or insert at specific point)
+- Not cache friendly since data is not stored adjacent
+
+#
 ## Example uses
+- Stacks and queues - only need operations on ends 
 
 #
 ## Resources
+- https://www.interviewcake.com/concept/python/linked-list?
 
 #
