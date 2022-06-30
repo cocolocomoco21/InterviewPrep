@@ -17,6 +17,10 @@
 
 {explanation}
 
+**Append**: {val} {if valid}
+
+{explanation}
+
 **Deletion**: {val}
 
 {explanation}
@@ -32,6 +36,15 @@
 ## Distinguishing Features
 - 
 - 
+
+#
+## Strengths and Weaknesses
+
+**Strengths**:
+- {element}
+
+**Weaknesses**:
+- {element}
 
 #
 ## Example uses
