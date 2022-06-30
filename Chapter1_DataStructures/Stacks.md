@@ -28,7 +28,7 @@ O(n) for all n elements in the stack.
 
 #
 ## Distinguishing Features
-- Four functions: `push(item)`, `pop()`, `peek()`, `isEmpty()`. Some resources say `size()` as well.
+- Four functions: `push(item)`, `pop()`, `peek()`, `isEmpty()`. Some resources say `size()` and `isFull()` as well.
 - Can use linked list or dynamic (automatic resizing) array under the hood
 
 #
