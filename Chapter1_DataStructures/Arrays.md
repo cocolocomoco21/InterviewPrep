@@ -5,7 +5,7 @@ Arrays provide a simple method of storing data in-order in a table-like structur
 Arrays provide quick lookups at a specific index and organize items sequentially. Items are accessed via index.  
 
 #
-## Time Complexity (worst case)
+## Time Complexity (average case)
 **Access**: O(1) (amortized)
 
 Depending on number of collisions, worst case runtime is O(n) lookup. In the typical and best case, O(1).
