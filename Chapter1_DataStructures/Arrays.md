@@ -6,9 +6,9 @@ Arrays provide quick lookups at a specific index and organize items sequentially
 
 #
 ## Time Complexity (average case)
-**Access**: O(1) (amortized)
+**Access**: O(1)
 
-Depending on number of collisions, worst case runtime is O(n) lookup. In the typical and best case, O(1).
+Constant time lookup in a static array - it's just looking up a value at an index/memory location.
 
 **Insertion (at specific)**: O(n)
 
