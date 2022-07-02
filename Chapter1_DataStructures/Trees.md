@@ -9,10 +9,10 @@ Trees use nodes to contain data and pointers to zero or more children nodes. Tre
 Example graph:
 
                         A
-                    /   |   \
-                B       C      D
-            /               /  |  \
-        E                 F    G   H     
+                     /  |  \
+                   B    C     D
+                 /          /  |  \
+                E          F    G   H     
                         /   \     /  \ 
                        I     J   K    L 
                        |     |        
@@ -30,6 +30,8 @@ Example graph:
     - Example: Node O has depth 5, J has depth 3, C has depth 1, A has depth 0, etc.
 - **Height** - the largest depth of a tree, or the number of links to the furthest leaf
     - Example: height = 5, due to depth of node O
+
+For tree traversals, refer to Binary Trees section.
 
 #
 ## Time Complexity (worst case) | Binary Search Tree

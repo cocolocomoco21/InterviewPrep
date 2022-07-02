@@ -73,6 +73,10 @@ Example graph:
     - D B A J G E C H F I
 - **Level-order** - visit current node (or root), then all nodes "1 level away" (depth 2), then "2 levels away" (depth 3). (Essentially same mechanism as Breadth-First Search)
     - A B C D E F G H I J
+- **Breadth-first search (BFS)** - explore all nodes one step away, then two steps away, etc. Search the breadth of the tree first.
+    - A B C D E F G H I J
+- **Depth-first search** - explore as deep as possible down one path before backing up and trying the next one.
+    - A B D D E G J F H I
 
 #
 ## Time Complexity (worst case) | Binary Tree
