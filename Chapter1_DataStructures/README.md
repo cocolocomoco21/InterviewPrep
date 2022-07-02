@@ -7,7 +7,7 @@
 5. Trees
     - Binary Trees
     - Binary Search Trees
-    - Trie Trees
+    - Trie Trees (Prefix Trees)
 6. Heaps and Priority Queues
 7. Graphs
 8. Hash Tables
