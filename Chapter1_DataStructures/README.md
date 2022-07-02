@@ -7,9 +7,10 @@
 5. Trees
     - Binary Trees
     - Binary Search Trees
+    - Heaps and Priority Queues
     - Trie Trees (Prefix Trees)
-6. Heaps and Priority Queues
-7. Graphs
+6. Graphs
+7. Sets
 8. Hash Tables
 
 ## Time Complexity Summary
