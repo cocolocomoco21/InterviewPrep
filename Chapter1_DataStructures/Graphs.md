@@ -1,21 +1,58 @@
 # Graphs
 ## Overview
 
-Graphs are a generalization of trees. Containing nodes and edges, they are similar to tree. However, nodes in a graph can have any number of nodes coming in or out of them. 
+Graphs organize data in an interconnected network of nodes and edges. 
+
+Graphs are a generalization of trees. A tree is a type of graph, but not all graphs are trees. Simply put, a tree is a graph with no cycles.
+
+A graph is simply a collection of nodes with edges between (some of) them. Nodes in a graph can have any number of nodes coming in or out of them and can connect with any other node.
 
 ## More Details and Definitions
-A lot of the terminology is self-explanatory and I've covered it before, so this list may not be comprehensive.
+Example graph:
+```
+        Graph 1                 Graph 2             Graph 3             Graph 4           Graph 5
+
+            E1                                                                                E1
+      (A)-------(B)         (A)-------->(B)      (A)----->(B)         (A)-------(B)      (A)---4---(B)
+       |  \      |           ^                    ^       /            | \     / |
+     E4|    \ E2 | E3        |                    |     /              |   \ /   |            E2
+       |      \  |           |                    |   /                |   / \   |       (C)---7---(D)
+      (C)-------(D)         (C)                  (C)&#8735;            | /     \ |
+            E5                                                        (C)-------(D)
+```
+
+Terminology:
+- **Node**: similar to node in tree, also called vertex
+    - Example: A, B, C, D (Graph 1)
+- **Edge**: connects nodes together, also called arcs
+    - Example: E1, E2, E3, E4, E5 (Graph 1)
+- **Path** - a specified route on a graph
+    - Example: C -> A -> B, or simply CAB (Graph 2)
 - There are two kinds of graphs:
-    - **Directed** graphs have arrows as edges.
-    - **Undirected** graphs have no direction.
-- **Path** - a given route on a graph.
-- Cycles in graphs - when a path exists where a node can be reached twice. 
-    - **Cyclic** graph - there is a cycle on the graph.
-    - **Acyclic** graph - the graph has no cycles. 
-- **DAG (Directed Acyclic Graph)** - directed graph that contains no cycles.
-- **Complete** graph - undirected graph with an edge between every pair of nodes.
-- **Weighted** graph - graph where edges have a value associated with them.
-- **Connected** graph - undirected graph has a path from every node to another node. There are no "islands".
+    - **Directed graph**: edges point from a node at one end to a node at the other end. Directed graphs have arrows as edges and paths can only go from node to node following the direction of the arrows.
+        - Example: Graph 2, Graph 3
+    - **Undirected graph**: edges do not have arrows and graph is bi-directional. Edges simply connect the nodes at each end and paths can go in both directions.
+        - Example: Graph 1
+- **Cycle**: an unbroken series of nodes with no repeating nodes or edges, or when a path exists where a node can be reached twice. Basically, "does it have a loop?"
+    - **Cyclic graph**: there is a cycle on the graph
+        - Example: Graph 1, Graph 3
+    - **Acyclic graph**: the graph has no cycles
+        - Example: Graph 2
+- **Weight**: an edge has a value, signifying the "weight" of this path
+    - **Weighted graph**: graph where edges have a value associated with them
+        - Example: Graph 5, where weights are E1 = 4, E2 = 7
+    - **Unweighted graph**: graph does not have edges with weights/values
+        - Example: Graph 1, Graph 2, Graph 3, Graph 4
+- **Coloring**: assign colors to each node in a graph
+    - **Legal coloring**: no adjacent nodes have the same color
+        - Example: refer to InterviewCake link below
+- Special kinds of graphs:
+    - **Directed Acyclic Graph (DAG)**: directed graph that contains no cycles
+        - Example: Graph 2
+    - **Complete graph**: undirected graph with an edge between every pair of nodes. Every node is each other node's neighbor.
+        - Example; Graph 4
+    - **Connected graph**: undirected graph has a path from every node to another node. There are no "islands"
+        - Example: Graph 1, Graph 4
 
 ## Representing Graphs in Programming
 Adjacency List:
@@ -61,14 +98,24 @@ Adjacency Matrix:
 - Can pictorally represent a real-world problem, and then mathematically be solved for optimizations.
 
 #
+## Strengths and Weaknesses
+**Strengths**:
+- Representing links - great when working with things that connect to other things
+
+**Weaknesses**:
+- Scaling challenges - most graph algorithms are O(nlogn) or even slower. Depending on size of graph, running algorithms across nodes may not be feasible.
+
+#
 ## Example uses
-- Network arrangements (e.g. cities and flights, computer network structure)
+- Network arrangements (e.g. cities and flights, social network, computer network structure, etc.)
 - Flow charts
 - State diagrams/tasks to be done
+- Routers and ethernet cables
+- Travelling salesman problem
 
 #
 ## Resources
-- 
-- 
+- https://pages.cs.wisc.edu/~skrentny/cs367-common/readings/Graphs/
+- https://www.interviewcake.com/concept/python/graph?
 
 #
