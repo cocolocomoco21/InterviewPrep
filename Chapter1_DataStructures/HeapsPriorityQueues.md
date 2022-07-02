@@ -1,16 +1,18 @@
 # Heaps and Priority Queues
 ## Overview
 
-Min-heaps are a complete (totally filled except from bottom right corner) binary tree where each node is smaller than its children. The root is the minimum element in the tree.
+Min-heaps are a complete binary tree where each node is smaller than its children. The root is the minimum element in the tree.
 
 The same goes for max-heaps; the root is the maximum element in the tree.
 
 ## More Details and Definitions
-Heaps are used to implement **priority queues** - a priority queue is a queue ordered based on some priority value. Every item in queue has priority and higher-priority items are dequeued first.
+**Complete binary tree**: binary tree that is totally filled except from bottom right corner.
+
+**Priority queues**: A priority queue is a queue ordered based on some priority value. Every item in queue has priority and higher-priority items are dequeued first. Heaps are used to implement **priority queues**.
 
 For example, a printer: if the CEO prints a job, it should be the highest priority and print fastest. If a VP prints, it should be higher than the jobs of people under him/her, but not higher than the C suite. An intern should be lowest ;).
 
-A **heap** is a binary tree with two special properties (using a min heap for example):
+**Heap**: A heap is a binary tree with two special properties (using a min heap for example):
     
 1) **Order property**: every node n must have a value less than or equal to its children (and thus the rest of the subtree).
 2) **Shape property**: the binary tree must be complete (the only free space in the tree must be in the rightmost elements).
@@ -25,7 +27,7 @@ Example graph for a min-heap:
 ```
 
 #
-## Algorithms for Operations (Insert and RemoveMin)
+## Algorithms for Operations (Insert, RemoveMin, and Heapify)
 - **Insert**: Elements inserted are added at the bottom-right most open leaf, and continually compared and swapped with the parent until the parent is smaller. 
 - **RemoveMin**: Elements removed are removed from the top always. The value at the end of the heap is then swapped into the root. Compare and swap (with the _smaller_ child) until it settles in the right place (i.e. swap with all elements that are smaller until there is no smaller element which you can't swap with).
 - **Heapify**: Create a heap from a list. Treat list like a complete binary tree that is unordered for a heap. Compare each node to its children, swapping when a child is smaller than the parent. This causes the larger nodes to "bubble down," which is similar for removing items from the heap. Eventually, we create small valid min-heaps and progressively merge them until the entire heap is considered valid. 
@@ -79,7 +81,7 @@ O(n) to hold the n elements. Noteworthy that this is commonly done in a list as 
 - Priority queue <--> heap. 
   - Priority queue = every item in queue has priority and higher-priority items are dequeued first
 - Anything which has a "weight" regarding priority or urgency
-- Heapsort (create a heap and then remove them into a sorted list) is efficient (O(nlogn))
+- Heapsort (create a heap and then remove them into a sorted list) is efficient (O(nlogn) - O(n) to make heap = O(logn) to pop off O(n) items)
 
 #
 ## Resources
