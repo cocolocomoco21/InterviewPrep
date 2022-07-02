@@ -45,7 +45,7 @@ Binary trees are trees where every node has at most two children.
 ```            
               A    (balanced)                A     (imbalanced)
             /   \                          /   \
-          B      C         vs.          B       C
+          B      C         vs.           B      C
         /  \    /                                \
        D    E  F                                  D
                                                    \
