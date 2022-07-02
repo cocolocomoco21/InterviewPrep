@@ -12,7 +12,7 @@
 6. Graphs
 7. Sets
 8. Hash Tables
-
+#
 ## Time Complexity Summary
 ### Arrays
 - Access: O(1)
@@ -40,6 +40,25 @@
 - Peek: O(1)
 
 ### Trees
+**Binary trees**:
+- Insert: O(n)
+- Delete: O(n)
+- Lookup: O(n)
+
+**Binary search trees**:
+- Insert: O(n). O(log n) if balanced.
+- Delete: O(n). O(log n) if balanced.
+- Lookup: O(n). O(log n) if balanced.
+
+**Red-black trees**:
+
+**Tries/prefix tree**: 
+- Insert: O(k), where k = length of string
+- Delete: O(k), where k = length of string
+- Lookup: O(k), where k = length of string
+
 ### Heaps and Priority Queues
 ### Graphs
 ### Hash Tables
+
+#

@@ -23,12 +23,15 @@ Example graph:
   - MANY, MY, LIE, and A
 - **Node** - each node in a trie can have 1 to {number of characters in the alphabet + 1} children (if null node is used).
  
-
 #
 ## Time Complexity (worst case)
-**Insertion**: O(k), where k = length of strings
+**Insertion**: O(k), where k = length of string
 
 Must traverse all k characters, whether they exist or not. If they do not exist, creating a new node is constant. If they do exist, you must still traverse down. As such, O(k).
+
+**Delete**: O(k), where k = length of string
+
+Refer to geeksforgeeks.org link below.
 
 **Lookup**: O(k), where k = length of string
 
@@ -42,7 +45,6 @@ O(n * k), where n = number of words and k = (average?) length of each word.
 ## Distinguishing Features
 - Char/string lookup. Good for prefix lookup or determining permutations of words
 - Can be space inefficient compared to a set. If looking for "does this word exist", hashset is space more efficient. If looking for suggestions for a prefix, use trie.
-
 
 #
 ## Strengths and Weaknesses
@@ -67,5 +69,6 @@ O(n * k), where n = number of words and k = (average?) length of each word.
 - https://www.interviewcake.com/concept/java/trie
 - https://www.interviewcake.com/concept/python/tree
 - https://stackoverflow.com/questions/13032116/trie-complexity-and-searching 
+- https://www.geeksforgeeks.org/trie-delete/
 
 #
