@@ -51,6 +51,9 @@
 - Lookup: O(n). O(log n) if balanced.
 
 **Red-black trees**:
+- Insert: O(log n)
+- Delete: O(log n)
+- Lookup: O(log n)
 
 **Tries/prefix tree**: 
 - Insert: O(k), where k = length of string
