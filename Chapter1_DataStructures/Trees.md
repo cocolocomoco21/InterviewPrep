@@ -7,7 +7,7 @@ Trees use nodes to contain data and pointers to zero or more children nodes. Tre
 
 ## More Details and Definitions
 Example graph:
-
+```
                         A
                      /  |  \
                    B    C     D
@@ -19,7 +19,7 @@ Example graph:
                        M     N
                        |
                        O
-
+```
 
 - **Node** - contain data and pointers to zero or more children. "Guts" of a tree
     - Example: Nodes A through O
@@ -34,7 +34,7 @@ Example graph:
 For tree traversals, refer to Binary Trees section.
 
 #
-## Time Complexity (worst case) | Binary Search Tree
+## Time Complexity (worst case)
 Depends on specific tree type. Refer to subsequent sections for specific types of trees and their complexities.
 
 #
@@ -49,6 +49,18 @@ Depends on specific tree type. Refer to subsequent sections for specific types o
 - No allocation issues, since nodes have pointers and are not allocated in memory block
 
 #
+## Strengths and Weaknesses
+
+**Strengths**:
+- Hierarchical data store
+- Depending on specific tree used, can provide faster searching than linear data types
+- Extension of a linked data structure (e.g. linked list, stack, queue) to a structure that can have multiple replations among its nodes
+
+**Weaknesses**:
+- Are not great at any one thing (however can be good at many)
+- Without rules (e.g. BST or trie), trees can be as efficient as linear data structures (arrays, linked lists)
+
+#
 ## Example uses
 - File systems
 - Comments
@@ -60,5 +72,6 @@ Depends on specific tree type. Refer to subsequent sections for specific types o
 ## Resources
 - https://www.interviewcake.com/concept/python/tree
 - https://www.geeksforgeeks.org/applications-of-tree-data-structure/
+- https://www.cs.cmu.edu/~clo/www/CMU/DataStructures/Lessons/lesson4_1.htm
 
 #
