@@ -140,8 +140,26 @@ Example graph:
 - Same algorithms that are used on adjacency lists (e.g. BFS) can be used on adjacency matrices, but may be less efficient due to having to iterate through all nodes to identify a given neighbor's nodes.
 
 #
+## Algorithms for Operations (Lookup, Insert, and Delete)
+**Searching/Lookup**: two most common are depth-first search (DFS) and breadth-first search (BFS)
+- DFS: start at root (or arbitrary node) and explore each branch completely before moving to next branch. Go _deep_ first (hence _depth_-first search).
+    - Use-case: preferred if we want to visit every node in the graph (simpler than BFS)
+    - Algorithm: visit node `a`, then iterate through node `a`'s neighbors. When visiting node `b` (that's neighbor of `a`), visit all of `b`'s neighbors before going to `a`'s other neighbors. Keep track of visited!
+        - This is like pre-order tree traversal, but for graphs, key difference is that you must keep track of visited, otherwise the algorithm will infinite loop. Can be done by flag on each Node object or a set of visited nodes (if unique names, and depending on problem).
+- BFS: start at root (or arbitrary node) and explore each neighbor before going on to any children. Go _wide_ first (hence _breadth_-first search).
+    - Use-case: find shortest path (or any path)between two nodes
+    - Stays "as close" to the root for as long as possible
+    - Algorithm: Node `a` visits each of `a`'s neighbors before visiting any of their neighbors. This is iterative, using a queue, NOT recursive. Basically: mark root as visited and enqueue root. While the queue is not empty, dequeue node and visit that node. Then, for each child of that node, if not marked (aka added to queue), mark and add to queue.
+        - Note: we could potentially keep a set to track visited nodes, or just have a flag (`n.marked`) on each node for if it's been added already or not.
+- Bidirectional search: used to find shortest path between source and destination node. Basically run two simultaneous BFSs from each node and when their searches collide, we've found a path.
+    - If node has `k` adjacent nodes and the shortest paths from node `s` and `t` are length `d`, then we experience `k` nodes for first "level" of BFS, `k` nodes for second level (now `k^2`), and since length is `d`, we'd do this `d` times for O(`k^d`) nodes.
+    - For bidirectional, we have two searches collide after `d/2` levels (midpoint). `s` which visits approximately `k^(d/2)` nodes and so does `t`. That's `2k^(d/2)`, or O(`k^(d/2)`) nodes total, which is the square root of how long simple BFS takes.
+
+#
 ## Time Complexity (worst case)
-**Access (at a given location)**: {val}
+TODO
+
+**Access (at a given location)**: 
 
 {explanation}
 
@@ -164,11 +182,15 @@ Example graph:
     - Visit a node, add its children to a queue. Pop node off queue, add its children to queue, and repeat.
 #
 ## Space Complexity
+TODO
 
 #
 ## Distinguishing Features
-- Generalized trees.
+- Generalized trees
 - Can pictorally represent a real-world problem, and then mathematically be solved for optimizations.
+- Trees but with less rules - any node can connect to any node
+- Edges can have weight, signifying the "cost" of taking that path
+- Graphs can be directed to show a one-way relationship between nodes
 
 #
 ## Strengths and Weaknesses
