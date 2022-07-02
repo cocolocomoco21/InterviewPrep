@@ -14,10 +14,10 @@ Example graph:
 
             E1                                                                                E1
       (A)-------(B)         (A)-------->(B)      (A)----->(B)         (A)-------(B)      (A)---4---(B)
-       |  \      |           ^                    ^       /            | \     / |
+       |  \      |           ^                    ^      /             | \     / |
      E4|    \ E2 | E3        |                    |     /              |   \ /   |            E2
-       |      \  |           |                    |   /                |   / \   |       (C)---7---(D)
-      (C)-------(D)         (C)                  (C)&#8735;            | /     \ |
+       |      \  |           |                    |    /               |   / \   |       (C)---7---(D)
+      (C)-------(D)         (C)                  (C)<-/                | /     \ |
             E5                                                        (C)-------(D)
 ```
 
@@ -52,19 +52,92 @@ Terminology:
     - **Complete graph**: undirected graph with an edge between every pair of nodes. Every node is each other node's neighbor.
         - Example; Graph 4
     - **Connected graph**: undirected graph has a path from every node to another node. There are no "islands"
-        - Example: Graph 1, Graph 4
+        - Example: Graph 1, Graph 4. Not Graph 2 or Graph 3 because directed, and not Graph 5 because not connected.
 
+#
 ## Representing Graphs in Programming
-Adjacency List:
-- Every vertex (node) stores a list of adjacent vertices.
-    - Directed graph: the current node represents the source, and the list represents targets.
-    - Undirected graph: the list will be duplicated. I.e. `(a, b)` will appear in `a`'s list, as well as `b`'s list.
-- Can use array/hash table, but typically use simple Graph, Node classes.
+There are different ways to store and represent graphs. 
 
-Adjacency Matrix:
-- NxN (N = number of nodes) matrix where true at `[i][j]` represents an edge from node `i` to node `j`.
-    - Directed: keep one axis as source, one as target. Not necessarily symmestrical.
-    - Undirected graph: will be symmetrical.
+Example graph:
+```
+      (3)-------(1)------(0)
+          \      | 
+            \    | 
+              \  | 
+               (2)
+```
+
+**Edge list**:
+- A list of all edges in the graph
+    - Example: `graph = [[0, 1], [1, 2], [1, 3], [2,3]]`
+- This fails if a node has no edges - can be useful to pair with list of nodes
+
+**Adjacency list** :
+- A list where the index represents the node and the value at that index is a list of the node's neighbors
+    - Example: 
+        ```
+        graph = [
+            [1],
+            [0, 2, 3],
+            [1, 3],
+            [1, 2],
+        ]
+         ```
+        Here, index 0 corresponds to node 0. Node 0 has neighbor node 1, so `graph[0] = [1]`. Node 1 (index 1) has neighbor nodes 0, 2, and 3, so `graph[1] = [0, 2, 3]`, etc.
+- Alternatively, you can use a complex class for Graph/Node:
+    - Every node stores a list of adjacent nodes
+        - Directed graph: the current node represents the source, and the list represents targets
+        - Undirected graph: there will be duplication between neighbors, i.e. the edge `(a, b)` will appear in `a`'s children list, as well as `b`'s children list
+    - ```
+        class Graph {
+            public Node[] nodes;
+        }
+
+        class Node {
+            public String name;
+            public Node[] children;
+        }
+      ```
+- Can use array/hash table/dictionary
+    - Map node to list of neighbors
+    - Useful if nodes are represented by strings, objects, or something that doesn't map cleanly to a list index
+    - "Typically use simple Graph and Node classes unless compelling reason not to" - CtCI
+    - Example:
+        ```
+        graph = {
+            0: [1],
+            1: [0, 2, 3],
+            2: [1, 3],
+            3: [1, 2],
+        }
+         ```
+
+**Adjacency Matrix**:
+- Matrix representing if node `i` connects to node `j`
+    - Element at `[i][j]` represents the presence/absence of an edge from node `i` to node `j`.
+        - True (or 1) means there is an edge between `i` and `j`; false (or 0) represents there is no edge
+        - N = number of nodes
+    - Example:
+        ```
+        graph = [
+            [false, true, false, false],
+            [true, false, true, true],
+            [false, true, false, true],
+            [false, true, true, false],
+        ]
+        ```
+        or 
+        ```
+        graph = [
+            [0, 1, 0, 0],
+            [1, 0, 1, 1],
+            [0, 1, 0, 1],
+            [0, 1, 1, 0],
+        ]
+        ```
+- Directed graph: keep one axis as source, one as target. Not necessarily symmestrical.
+- Undirected graph: will be symmetrical
+- Same algorithms that are used on adjacency lists (e.g. BFS) can be used on adjacency matrices, but may be less efficient due to having to iterate through all nodes to identify a given neighbor's nodes.
 
 #
 ## Time Complexity (worst case)
