@@ -61,6 +61,13 @@
 - Lookup: O(k), where k = length of string
 
 ### Heaps and Priority Queues
+- Insert: O(log n)
+- RemoveMin: O(log n)
+- GetMin: O(1)
+- Heapify/BuildMinHeap: O(n)
+- Lookup: O(n) (not the purpose of heap)
+- Heapsort: O(nlogn)
+
 ### Graphs
 ### Hash Tables
 

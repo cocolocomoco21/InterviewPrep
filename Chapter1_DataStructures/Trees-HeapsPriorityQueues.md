@@ -30,7 +30,9 @@ Example graph for a min-heap:
 ## Algorithms for Operations (Insert, RemoveMin, and Heapify)
 - **Insert**: Elements inserted are added at the bottom-right most open leaf, and continually compared and swapped with the parent until the parent is smaller. 
 - **RemoveMin**: Elements removed are removed from the top always. The value at the end of the heap is then swapped into the root. Compare and swap (with the _smaller_ child) until it settles in the right place (i.e. swap with all elements that are smaller until there is no smaller element which you can't swap with).
-- **Heapify**: Create a heap from a list. Treat list like a complete binary tree that is unordered for a heap. Compare each node to its children, swapping when a child is smaller than the parent. This causes the larger nodes to "bubble down," which is similar for removing items from the heap. Eventually, we create small valid min-heaps and progressively merge them until the entire heap is considered valid. 
+- **Heapify/BuildMinHeap**: Create a heap from a list. Treat list like a complete binary tree that is unordered for a heap. Compare each node to its children, swapping when a child is smaller than the parent. This causes the larger nodes to "bubble down," which is similar for removing items from the heap. Eventually, we create small valid min-heaps and progressively merge them until the entire heap is considered valid. 
+- **Heapsort**: Create a heap of elements, then pop off each element into an array. This creates a sorted list of elements. Specific algorithm on Wikipedia reference below.
+
 
 #
 ## Time Complexity (worst case)
@@ -55,6 +57,10 @@ This is not O(nlogn) because that overestimates the amount of work. The n/2 numb
 **Search (to find if element exists)**: Not the use case for a heap, but technically O(n)
 
 If you're trying to search a binary tree, use a binary search tree. But technically, the complexity of searching a heap is O(n) because in the worst case, you'd have to go through all elements in a BFS-like search. Since there is no rule on putting values to the left or right, rather just putting values above or below each other, there is no O(log n) guarantee like a BST.
+
+**Heapsort**: O(nlogn)
+
+This is O(n) to make heap using Heapify/BuildMinHeap (above), and O(logn) to pop off O(n) items. Therefore, Heapsort is O(n) + O(n * logn) = O(n + nlogn) = O(nlogn).
 
 #
 ## Space Complexity
@@ -89,5 +95,6 @@ O(n) to hold the n elements. Noteworthy that this is commonly done in a list as 
 - https://www.interviewcake.com/concept/python/heap
 - https://www.interviewcake.com/concept/python/priority-queue
 - https://www.geeksforgeeks.org/time-complexity-of-building-a-heap/
+- https://en.wikipedia.org/wiki/Heapsort
 
 #
