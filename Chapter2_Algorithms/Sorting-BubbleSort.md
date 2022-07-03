@@ -41,6 +41,7 @@ Bubble sort is done in place.
 **Strengths**:
 - ??
 - Easy to understand?
+- Done in place
 
 **Weaknesses**:
 - Very inefficient (O(n^2))

@@ -8,10 +8,12 @@ The heavy lifting is done in the "**merge**" portion of merge sort (not the divi
 Merge sort is notable for its complexity - O(nlogn) - for all scenarios.
 
 ## Typical Use-Case
+
 Efficient time complexity for sorting.
 
 #
 ## Algorithm
+
 Using recursion, do:
 - Divide the array into two halves
 - Recursively, sort the left half
@@ -67,7 +69,7 @@ combineSortedLists(leftList, rightList) {
 
 ## Ilustration
 
-![Selection sort gif](https://upload.wikimedia.org/wikipedia/commons/c/cc/Merge-sort-example-300px.gif)
+![Merge sort gif](https://upload.wikimedia.org/wikipedia/commons/c/cc/Merge-sort-example-300px.gif)
 
 #
 ## Time Complexity
@@ -118,5 +120,6 @@ When combining two sorted lists into a single bigger one, we need extra space to
 ## Resources
 - https://www.interviewcake.com/concept/python/merge-sort
 - https://pages.cs.wisc.edu/~skrentny/cs367-common/readings/Sorting/#merge
+- CtCI
 
 #

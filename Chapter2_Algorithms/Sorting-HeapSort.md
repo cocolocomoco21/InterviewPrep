@@ -63,7 +63,6 @@ In place algorithm:
 
     Keep a pointer to where to add the next max. Continue calling RemoveMax(), reordering heap, and adding that max to the end. Once you reach the front, you have an ascendingly sorted array.
 
-
 ## Ilustration
 
 ![Heapsort gif](https://upload.wikimedia.org/wikipedia/commons/4/4d/Heapsort-example.gif)

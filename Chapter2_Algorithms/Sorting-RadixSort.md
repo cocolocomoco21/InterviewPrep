@@ -7,7 +7,7 @@ That is, radix sort sorts the ones place for every integer, then the tens, then 
 
 ## Typical Use-Case
 
-Really good for a specific use case - sorting fixed-size numbers.
+Really good for a specific use case - sorting a fixed amount of fixed-size numbers.
 
 #
 ## Algorithm
@@ -44,6 +44,7 @@ For 64-bit integers, the number of digits, k, = 64. Using binary, each digit can
 ## Distinguishing Features
 - Fast! Linear time to sort n integers with fixed number of bits
 - Not a comparison sort
+- Sorts numbers very well
 
 #
 ## Strengths and Weaknesses

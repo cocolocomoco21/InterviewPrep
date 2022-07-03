@@ -17,17 +17,9 @@ Find (select!) the smallest remaining element (via linear scan) and move it to t
 
 #
 ## Time Complexity
-**Worst case**: O(n^2)
+**Worst/best/average case**: O(n^2)
 
 Iterate over list n times. We iterate over n elements, then n-1 elements, then n-2, ..., 3, 2, 1. Adding this is the triangular series, which is O(n^2).
-
-**Best case**: O(n^2)
-
-Above
-
-**Average case**: O(n^2)
-
-Above
 
 #
 ## Space Complexity
@@ -44,6 +36,7 @@ Selection sort is done in place.
 
 **Strengths**:
 - Easy to understand?
+- Done in place
 
 **Weaknesses**:
 - Very inefficient (O(n^2))

@@ -47,7 +47,7 @@ Insertion sort is done in place (mostly, there might be a temp variable for swap
 
 **Strengths**:
 - Intuitive
-- Space efficient
+- Space efficient - done in place
 - Fast on a sorted list
 
 **Weaknesses**:

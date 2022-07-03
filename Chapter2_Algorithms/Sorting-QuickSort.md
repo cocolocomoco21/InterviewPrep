@@ -7,7 +7,7 @@ The heavy lifting is done in the "**dividing**" portion of quicksort (not the me
 
 ## Typical Use-Case
 
-Mostly-efficient time complexity for sorting. If storage is a hard constraint but potential worst-case performance is not, this can be better than merge sort.
+If you want a sorting algorithm that is efficient and done with good space complexity, use quicksort. More efficient time complexity than heapsort in practice, and lower space complexity than merge sort. 
 
 #
 ## Algorithm
@@ -68,7 +68,7 @@ Quicksort is in place, without any extra data structures. But in the worst case,
 **Strengths**:
 - Fast. On average, O(nlogn)
 - Parallelizable - merge sort breaks input into chunks, which can each be sorted at the same time in parallel
-- Does not require extra storage like merge sort does
+- Space efficient (Ologn) - does not require extra storage like merge sort does
 
 **Weaknesses**:
 - Slow worst-case - O(n^2). This isn't common but still makes quicksort undesirable if there's any performance requirement
