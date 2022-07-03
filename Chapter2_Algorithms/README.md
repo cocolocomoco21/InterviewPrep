@@ -10,6 +10,7 @@
     - Heapsort
 2. Searching
     - Linear/Sequential Search
+    - Binary Search
 
 #
 ## Complexity Summary
