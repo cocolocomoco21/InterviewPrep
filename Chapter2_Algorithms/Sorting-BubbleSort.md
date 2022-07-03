@@ -1,7 +1,7 @@
 # Bubble Sort
 ## Overview
 
-"Bubble" smaller items to the front by slowly swapping them incrementally on each pass of the sort.
+Bubble sort works by "bubble"-ing smaller items to the front by slowly swapping them incrementally on each pass of the sort.
 
 ## Typical Use-Case
 
@@ -25,12 +25,11 @@ Start at beginning of array and swap first two elements if the first is greater 
 
 Iterate over n elements n times to give O(n^2).
 
+#
+## Space Complexity
 **Memory**: O(1)
 
 Bubble sort is done in place.
-
-#
-## Space Complexity
 
 #
 ## Distinguishing Features

@@ -1,7 +1,7 @@
 # Selection Sort
 ## Overview
 
-Select the smallest remaining element (via linear scan) and move it to the front. Repeat on the remaining n-1 elements, repeatedly, until the array is sorted.
+Selection sort works by selecting the smallest element from an unsorted list and moving it to the front.
 
 ## Typical Use-Case
 
@@ -9,7 +9,7 @@ It's an easy algorithm to understand and learn. In practice, this shouldn't be u
 
 #
 ## Algorithm
-Find (select!) the smallest element using a linear scan and move it to the front (swap with front element). Then, find second smallest and move it, again doing linear scan.
+Find (select!) the smallest remaining element (via linear scan) and move it to the front (swap with front element). Then, find second smallest for the remaining n-1 elements and move it to the front, again doing linear scan. Repeat until you reach the end of the list.
 
 ## Ilustration
 
@@ -44,7 +44,6 @@ Selection sort is done in place.
 ## Strengths and Weaknesses
 
 **Strengths**:
-- ??
 - Easy to understand?
 
 **Weaknesses**:
@@ -53,7 +52,8 @@ Selection sort is done in place.
 
 #
 ## Example uses
-- Learning 
+- Learning
+- Packing a suitcase, putting large items before small - selection sort
 
 #
 ## Resources
