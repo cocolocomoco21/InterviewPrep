@@ -37,8 +37,7 @@ Selection sort is done in place.
 
 #
 ## Distinguishing Features
-- Normally somewhat meme-y with how bad it is.
-- 
+- "Select" the next smallest element
 
 #
 ## Strengths and Weaknesses

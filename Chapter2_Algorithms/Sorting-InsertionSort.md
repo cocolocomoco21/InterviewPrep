@@ -5,7 +5,7 @@ Insertion sort works by inserting elements from an unsorted list into a sorted s
 
 ## Typical Use-Case
 
-{todo}
+Sorted, or nearly or likely sorted list
 
 #
 ## Algorithm
@@ -39,8 +39,8 @@ Insertion sort is done in place (mostly, there might be a temp variable for swap
 
 #
 ## Distinguishing Features
+- Efficient on a sorted or nearly sorted list 
 - Intuitive, like how you sort cards in a hand
-- 
 
 #
 ## Strengths and Weaknesses
