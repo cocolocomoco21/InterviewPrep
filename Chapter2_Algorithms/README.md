@@ -9,6 +9,7 @@
     - Radix Sort
     - Heapsort
 2. Searching
+    - Linear/Sequential Search
 
 #
 ## Complexity Summary
@@ -45,6 +46,9 @@ Heapsort:
 - **Best**: O(n) (if all items are identical)
 - **Space**: O(1)
 
+Cheat sheets:
+- https://www.interviewcake.com/sorting-algorithm-cheat-sheet
+- https://www.bigocheatsheet.com/
 
 ## Searching
 
