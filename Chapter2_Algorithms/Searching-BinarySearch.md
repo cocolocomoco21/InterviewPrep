@@ -1,7 +1,9 @@
 # Binary Search
 ## Overview
 
-Binary search uses a sorted list to compare the midpoint of an interval to `x`. If the midpont equals `x`, it returns. If not, it disregards half of the array depending on if `x` is greater than or less than the midpoint and continues the search on the remaining half.   
+Binary search uses a sorted list to compare the midpoint of an interval to `x`. If the midpont equals `x`, it returns. If `x` is less than the midpoint, search the left half of the array. If `x` is greater than the midpoint, search the right half of the array. 
+
+This disregards half of the array depending on if `x` is greater than or less than the midpoint and continues the search on the remaining half.  
 
 The key insight is that in a sorted array, you can perform search in O(logn).
 

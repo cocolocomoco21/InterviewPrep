@@ -5,17 +5,17 @@ Linear/sequential search involves looking at each value in turn (i.e. start with
 
 ## Typical Use-Case
 
-Simple algorithm. Good for learning and doesn't need sorted data to search?
+Simple algorithm. Brute-force fallback. Good for learning and doesn't need sorted data to search?
 
 #
 ## Algorithms
 
-Start from the left-most element of the array. Iterate through the array elements one by one, comparing the current element to x. If x matches, return the index. If x does not match with any elements, return -1.
+Start from the left-most element of the array. Iterate through the array elements one by one, comparing the current element to `x`. If `x` matches, return the index. If `x` does not match with any elements, return -1.
 
 ## Ilustration
 Linear/sequential search:
 
-![Linear/Sequential search](https://www.tutorialspoint.com/data_structures_algorithms/images/linear_search.gif)
+![Linear/sequential search](https://www.tutorialspoint.com/data_structures_algorithms/images/linear_search.gif)
 
 Linear/sequential search vs. binary search:
 
@@ -29,7 +29,7 @@ To compare each element, you must iterate over all n elements.
 
 **Best case**: O(1)
 
-x is the first element in the array
+`x` is the first element in the array
 
 #
 ## Space Complexity
@@ -60,5 +60,6 @@ No additional space is needed for linear/sequential search.
 ## Resources
 - https://pages.cs.wisc.edu/~skrentny/cs367-common/readings/Searching/
 - https://www.geeksforgeeks.org/linear-search/
+- https://www.geeksforgeeks.org/linear-search-vs-binary-search/
 
 #
