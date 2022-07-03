@@ -11,6 +11,8 @@
 2. Searching
     - Linear/Sequential Search
     - Binary Search
+    - Breadth-First Search
+    - Depth-First Search
 
 #
 ## Complexity Summary
