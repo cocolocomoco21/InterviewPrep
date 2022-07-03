@@ -6,21 +6,17 @@ Similarly to arrays, hash tables provide constant time lookup according to a loo
 
 #
 ## Time Complexity (average case)
-**Access**: O(1) (amortized)
+**Lookup**: O(1) (amortized)
 
 Depending on number of collisions, worst case runtime is O(n) lookup. In the typical and best case, O(1).
 
-**Insertion (at specific)**: O(1)
+**Insertion (at specific)**: O(1) (amortized)
 
 In the worst case, the entire hash table is collided at one key and you must deal with n collisions (O(n)). Assuming a "good" hash function, the keys are spread across the hash table, which leads to no collisions and therefore O(1) insertion.
 
-**Deletion**: O(1)
+**Deletion**: O(1) (amortized)
 
 In the worst case, you must iterate over n collisions to to find element you want to delete (O(n)), then depending on the collision data structure, O(n) to shift all elements. In the average case, the data is spread due to "good" hash function and it is constant time to delete.
-
-**Search**: O(n)
-
-In the worst case, you must iterate over n elements (across keys and collisions) to find the element (O(n)).
 
 #
 ## Space Complexity

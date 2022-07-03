@@ -12,6 +12,7 @@
 6. Graphs
 7. Sets
 8. Hash Tables
+
 #
 ## Time Complexity Summary
 ### Arrays
@@ -69,6 +70,16 @@
 - Heapsort: O(nlogn)
 
 ### Graphs
+- TODO
+
+### Sets (HashSet)
+- Insert: O(1)
+- Delete: O(1)
+- Lookup: O(1)
+
 ### Hash Tables
+- Insert: O(1) (amortized)
+- Delete: O(1) (amortized)
+- Lookup: O(1) (amortized)
 
 #
