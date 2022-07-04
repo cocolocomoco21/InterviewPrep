@@ -27,4 +27,4 @@ Greedy algorithm approach. Keep track of the min and max price seen, as well as 
 - When you get to the end of the array, return profit.
 
 ### Search terms
-lc-blind75, lc-greedyalgorithm, lc-arrays
+lc-blind75, lc-greedyalgorithm, lc-arrays, lc-easy, lc-121

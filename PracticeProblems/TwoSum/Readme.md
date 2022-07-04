@@ -11,4 +11,4 @@ Dynamic programming. Hashmap of remaining value -> index. For each num, lookup n
 and current index. Otherwise, add target - nums[i] to map for current index. Iterate until found.
 
 ### Search Terms
-lc-blind75, lc-dynamicprogramming, lc-arrays, lc-easy
+lc-blind75, lc-dynamicprogramming, lc-arrays, lc-easy, lc-1
