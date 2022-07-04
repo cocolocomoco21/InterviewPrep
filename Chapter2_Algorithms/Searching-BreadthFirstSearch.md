@@ -10,6 +10,7 @@ Exploring tree or graph:
 - Find all nodes reachable from start node (both BFS and DFS)
 - If tree, level-order traversal
 - Find shortest distance in unweighted graph (add distance field to each node, when enqueuing, set node's distance to current node + 1)
+- Searching for vertices which are closer to the source
 
 #
 ## Algorithms
@@ -50,15 +51,17 @@ BFS vs. DFS:
 
 #
 ## Time Complexity
-**Worst/best/average case**: O(V + E), where V = number of vertices, E = number of edges
+**Worst/best/average case**: O(V + E), where V = number of vertices, E = number of edges (for adjacency list)
 
-The while loop in the algorithm runs V times, for each vertice (node) in the graph once, so O(V).
+The while loop in the algorithm runs V times, for each vertex (node) in the graph once, so O(V).
 
-The for loops (iterating over all children/neighbors for each vertex) takes a total of O(E), since you must scan for all adjacent vertices (e.g. in an adjacency list)
+The for loops (iterating over all children/neighbors for each vertex) takes a total of O(E), since you must scan for all adjacent vertices (e.g. in an adjacency list).
+
+So O(V + E).
 
 #
 ## Space Complexity
-**Memory**: O(V) = where V = number of vertices
+**Memory**: O(V), where V = number of vertices (for adjacency list)
 
 You must make an additional queue to track which vertices will be visited next. This must be the number of vertices to not require additional expansions (e.g. if one node is connected to every other node).
 
@@ -72,6 +75,7 @@ You must make an additional queue to track which vertices will be visited next. 
 
 **Strengths**:
 - BFS will find the shortest path between a starting and any other reachable node. DFS will not necessarily find shortest
+- Searching for vertices which are closer to the source
 
 **Weaknesses**:
 - BFS on a binary tree _generally_ requires more memory than DFS
@@ -86,5 +90,7 @@ You must make an additional queue to track which vertices will be visited next. 
 - https://pages.cs.wisc.edu/~skrentny/cs367-common/readings/Graphs/#bfs
 - https://www.interviewcake.com/concept/java/bfs
 - https://stackoverflow.com/questions/26549140/breadth-first-search-time-complexity-analysis
+- https://stackoverflow.com/a/27519276
+- https://www.geeksforgeeks.org/difference-between-bfs-and-dfs/
 
 #

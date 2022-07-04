@@ -13,6 +13,10 @@
     - Binary Search
     - Breadth-First Search
     - Depth-First Search
+3. Dynamic Programming
+4. Recursion
+5. Divide and Conquer
+6. Greedy Algorithms
 
 #
 ## Complexity Summary
@@ -37,7 +41,7 @@ Merge sort:
 
 Quicksort:
 - **Worst**: O(n^2) (if array is already sorted)
-- **Best/Average**: O(nlogn)
+- **Best/average**: O(nlogn)
 - **Space**: O(logn)
 
 Radix sort:
@@ -54,11 +58,23 @@ Cheat sheets:
 - https://www.bigocheatsheet.com/
 
 ## Searching
+Linear/Sequential search:
+- **Worst/average**: O(n)
+- **Best**: O(1)
+- **Space**: O(1)
 
-## Binary Search
+Binary search:
+- **Worst/average**: O(logn)
+- **Best**: O(1)
+- **Space**: O(1)
 
+Breadth-first search:
+- **Worst/best/average**: O(V + E), where V = number of vertices, E = number of edges (for adjacency list)
+- **Space**: O(V), where V = number of vertices (for adjacency list)
 
-
+Depth-first search:
+- **Worst/best/average**: O(V + E), where V = number of vertices, E = number of edges (for adjacency list)
+- **Space**: O(h), where h = height of tree
 
 
 #

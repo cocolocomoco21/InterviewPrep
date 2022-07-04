@@ -23,7 +23,7 @@ Linear/sequential search vs. binary search:
 
 #
 ## Time Complexity
-**Worst case/average**: O(n)
+**Worst/average case**: O(n)
 
 To compare each element, you must iterate over all n elements.
 

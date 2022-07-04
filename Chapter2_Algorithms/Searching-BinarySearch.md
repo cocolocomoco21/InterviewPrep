@@ -50,7 +50,7 @@ Linear/sequential search vs. binary search:
 
 #
 ## Time Complexity
-**Worst case/average**: O(logn)
+**Worst/average case**: O(logn)
 
 Each "round" is constant time comparisons. So the complexity comes down to how many times the algorithm is run. Since we continually divide by half, this results in logn rounds. So O(logn).
 
