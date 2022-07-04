@@ -1,4 +1,4 @@
-# Divide and Conquer
+# Divide and Conquer Algorithms
 ## Overview
 
 Divide and conquer algorithms solve problems by dividing the problem into smaller subproblems, recursively conquering (solving) the subproblems, and combining the result.
