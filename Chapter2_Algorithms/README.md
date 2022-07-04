@@ -13,10 +13,11 @@
     - Binary Search
     - Breadth-First Search
     - Depth-First Search
-3. Dynamic Programming
-4. Recursion
+3. Recursion
+4. Dynamic Programming
 5. Divide and Conquer
 6. Greedy Algorithms
+7. Dijkstra's
 
 #
 ## Complexity Summary
