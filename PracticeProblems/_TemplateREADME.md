@@ -5,6 +5,9 @@
 ### Problem
 { explain problem }
 
+### Example
+{ give example }
+
 ### Approach
 { explain approach, what principles it uses (e.g. greedy, dynamic programming, sort then find min, etc., solution, and algorithm overview }
 
