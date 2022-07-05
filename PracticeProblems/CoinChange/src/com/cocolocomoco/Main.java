@@ -6,21 +6,22 @@ import java.util.stream.Collectors;
 public class Main {
 
     public static void main(String[] args) {
-        int[] coins = new int[] {2};
-        int amount = 3;
+//        int[] coins = new int[] {2};
+//        int amount = 3;
 
 //        int[] coins = new int[] {186,419,83,408};
 //        int amount = 6249;
 
-//        int[] coins = new int[] {1, 2, 5};
-//        int amount = 11;
+        int[] coins = new int[] {1, 2, 5};
+        int amount = 11;
 
 //        int[] coins = new int[] {1, 4, 6};
 //        int amount = 8;
 
 //        Solution solution = new Solution();
 //        SolutionII solution = new SolutionII();
-        SolutionIII solution = new SolutionIII();
+//        SolutionIII solution = new SolutionIII();
+        SolutionIV solution = new SolutionIV();
         int fewestCoins = solution.coinChange(coins, amount);
 
         System.out.println(fewestCoins);
@@ -163,5 +164,56 @@ class SolutionIII {
         }
 
         return this.mapRemainingAmountToLeastCoins.get(remainingAmount);
+    }
+}
+
+class SolutionIV {
+    private HashMap<Integer, Integer> mapRemainingAmountToNumberOfCoins;
+    private List<Integer> coins;
+
+    public SolutionIV() {
+        this.mapRemainingAmountToNumberOfCoins = new HashMap<>();
+        this.coins = new ArrayList<>();
+    }
+
+    public int coinChange(int[] coins, int amount) {
+        if (amount == 0) {
+            return 0;
+        }
+
+        // In case this is run successively
+        this.coins.clear();
+        this.mapRemainingAmountToNumberOfCoins.clear();
+
+        Arrays.stream(coins).forEach(coin -> {
+            this.mapRemainingAmountToNumberOfCoins.put(coin, 1);
+            this.coins.add(coin);
+        });
+
+        return lookup(amount);
+    }
+
+    private int lookup(int remainingAmount) {
+        if (remainingAmount <= 0) {
+            return -1;
+        }
+
+        if (this.mapRemainingAmountToNumberOfCoins.containsKey(remainingAmount)) {
+            return this.mapRemainingAmountToNumberOfCoins.get(remainingAmount);
+        }
+
+        int minCoins = Integer.MAX_VALUE;
+        for (int coin: this.coins) {
+            int min = lookup(remainingAmount - coin);
+            if (min < minCoins && min != -1) {
+                minCoins = min;
+            }
+        }
+
+        minCoins = (minCoins == Integer.MAX_VALUE) ? -1 : minCoins + 1;
+
+        this.mapRemainingAmountToNumberOfCoins.put(remainingAmount, minCoins);
+
+        return minCoins;
     }
 }

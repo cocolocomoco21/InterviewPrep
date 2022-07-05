@@ -1,3 +1,7 @@
+# Coin Change
+### LC 322
+https://leetcode.com/problems/coin-change/
+
 ### Problem
 You are given an integer array coins representing coins of different denominations and an integer amount representing a total amount of money.
 
@@ -5,7 +9,12 @@ Return the fewest number of coins that you need to make up that amount. If that 
 
 You may assume that you have an infinite number of each kind of coin.
 
-https://leetcode.com/problems/coin-change/
+### Example
+```
+Input: coins = [1,2,5], amount = 11
+Output: 3
+Explanation: 11 = 5 + 5 + 1
+```
 
 ### Approach
 
@@ -24,3 +33,6 @@ Run this recursively, doing a DFS-like traversal:
 this to the map to store the lowest known number of coins for that remainingAmount. This gives constant time lookup for future iterations that encounter this remainingAmount
 - Continue returning minimum, which propagates it backwards. Add one each time to account for the current coin, effectively
 - Once we return to the original calling method, we've got the global min fewest coins. 
+
+### Search tags
+lc-blind75, lc-dynamicprogramming, lc-memoization, lc-medium, lc-70 
