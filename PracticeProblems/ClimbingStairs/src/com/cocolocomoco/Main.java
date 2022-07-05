@@ -21,13 +21,18 @@ class Solution {
     }
 
     public int climbStairs(int n) {
-        if (n < 0) {
+        if (n <= 0) {
             return 0;
         }
 
-        // Can get to stairs using one step, or got here using two steps
-        if (n == 0 || n == 1 ) {
+        // Can get to stairs using one step
+        if (n == 1 ) {
             return 1;
+        }
+
+        // Can get to stairs in two ways from second step (2 or 1+1)
+        if (n == 2) {
+            return 2;
         }
 
         // If we've already found the amount for this stair, return it
@@ -40,5 +45,34 @@ class Solution {
         mapStairToStepsToTop.put(n, totalForStair);
 
         return totalForStair;
+    }
+
+    // "Bottom up" dynamic programming approach. Just use a table and the current value is the sum of the "max"
+    // values from the previous two.
+    // This could be further optimized by just using two trailing varibles instead of an array.
+    public int climbStairs_bottomUp(int n) {
+        if (n <= 0) {
+            return 0;
+        }
+
+        // Can get to stairs using one step
+        if (n == 1 ) {
+            return 1;
+        }
+
+        if (n == 2) {
+            return 2;
+        }
+
+        int[] memo = new int[n];
+        memo[0] = 0;
+        memo[1] = 1;
+        memo[2] = 2;
+
+        for (int i = 3; i < n; i++) {
+            memo[i] = memo[i - 1] + memo [i - 2];
+        }
+
+        return memo[n - 2] + memo[n - 1];
     }
 }
