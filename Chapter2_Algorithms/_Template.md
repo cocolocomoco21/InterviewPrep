@@ -58,7 +58,7 @@
 - {element}
 
 #
-## Example uses
+## Example Uses
 - 
 - 
 
