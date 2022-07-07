@@ -47,7 +47,7 @@ Here is a decent suite of problems divided by topic that can serve as a comprehe
 - Clone Graph
 - Course Schedule (DAG)
 - Pacific Atlantic Water Flow
-- Number of Islands (DFS)
+- Number of Islands (DFS), Maximum Depth of Binary Tree (simple DFS)
 ### Bidirectional Search: 
 - Pacific Atlantic Water Flow
 ### Topological Sort:
