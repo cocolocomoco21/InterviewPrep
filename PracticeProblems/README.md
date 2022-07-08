@@ -18,6 +18,7 @@ Here is a decent suite of problems that can serve as a comprehensive pre-intervi
 - Course Schedule
 - Pacific Atlantic Water Flow
 - Maximum Path, Simple Tree
+- Binary Tree Level Order Traversal 
 
 
 #
@@ -45,6 +46,8 @@ Here is a decent suite of problems divided by topic that can serve as a comprehe
 ### Trees:
 - Maximum Path (simple DFS)
 - Same Tree (simple BFS)
+### Tree Traversal
+- Binary Tree Level Order Traversal (BFS)
 ### Graph Traversal:
 - Clone Graph
 - Course Schedule (DAG)
