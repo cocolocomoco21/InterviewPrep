@@ -17,6 +17,7 @@ Here is a decent suite of problems that can serve as a comprehensive pre-intervi
 - Unique Paths II, Climbing Stairs, Amazon: Robot Bounded in a Circle, CtCI - 8.1 (Triple Step)
 - Course Schedule
 - Pacific Atlantic Water Flow
+- Maximum Path, Simple Tree
 
 
 #
@@ -42,7 +43,8 @@ Here is a decent suite of problems divided by topic that can serve as a comprehe
 - CtCI - 8.1 (Triple Step)
 - Coin Change
 ### Trees:
-- Maximum Path
+- Maximum Path (simple DFS)
+- Same Tree (simple BFS)
 ### Graph Traversal:
 - Clone Graph
 - Course Schedule (DAG)
