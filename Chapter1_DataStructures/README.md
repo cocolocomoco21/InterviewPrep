@@ -7,6 +7,7 @@
 5. Trees
     - Binary Trees
     - Binary Search Trees
+    - Red Black Trees
     - Heaps and Priority Queues
     - Trie Trees (Prefix Trees)
 6. Graphs

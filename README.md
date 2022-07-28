@@ -7,28 +7,66 @@ This repo contains the general interview topics: data structures, algorithms, ti
 (This ToC is updated as I write out the repo. Eventually I'll even add links for these sections)
 
 ## Chapter 1: Data Structures
-#### I: Arrays
-#### II: Linked Lists
-#### III: Stacks
-#### IV: Queues
-#### V: Trees
-#### VI: Heaps and Priority Queues
-#### VII: Graphs
+1. Arrays
+2. Linked Lists
+3. Stacks
+4. Queues
+5. Trees
+    - Binary Trees
+    - Binary Search Trees
+    - Red Black Trees
+    - Heaps and Priority Queues
+    - Trie Trees (Prefix Trees)
+6. Graphs
+7. Sets
+8. Hash Tables
+
+## Chapter 2: Algorithms
+1. Sorting
+    - Bubble Sort
+    - Selection Sort
+    - Insertion Sort
+    - Merge Sort
+    - Quicksort
+    - Radix Sort
+    - Heapsort
+2. Searching
+    - Linear/Sequential Search
+    - Binary Search
+    - Breadth-First Search
+    - Depth-First Search
+3. Recursion
+4. Dynamic Programming
+5. Divide and Conquer
+6. Greedy Algorithms
+7. Dijkstra's Algorithm
+
+## Chapter 3: System Design
+TODO
+
+## Chapter 4: Programming Languages
+In progress
 
 #
-### Cracking the Coding Interview Solutions
-#### I: Arrays
-#### II: Linked Lists
-#### III: Stacks and Queues
-#### IV: Trees and Graphs
+## Cracking the Coding Interview Solutions
+1. Arrays and Strings (Ch. 1)
+2. Linked Lists (Ch. 2)
+3. Stacks and Queues (Ch. 3)
+4. Trees and Graphs (Ch. 4)
+5. Recursion and Dynamic Programming (Ch. 8)
 
------
-## Roadmap
-Below is tentative plan for the repo and not really part of the README as it matters to you.
+#
+## Practice Problems
+This directory is Leetcode practice problems. Some are prepended with a company name - this was likely gotten via searching for example questions for this company.
+
+#
+## Roadmap (in progress)
+Below is tentative plan for the repo and not really part of the README as it matters to you. This is just a dump of potential topics and a rough outline of how they'd be organized.
 
 
 Interview Prep:
 
+```
 Chapter 1: Data Structures
     For each data structure, give the following:
         Overview/Description
@@ -94,4 +132,13 @@ Chapter 5: Software Engineering
         Different types of tests: unit, integration, smoke, regression
 
 Chapter 6: Cracking the Coding Interview
+```
 
+Lastly, if you made it this far, this is some ASCII art I made that I thought was cool and didn't have anywhere else to put.
+```
+  ////////        ///        /////          ///
+     //        ///  ///      //  //      ///   ///
+     //        ///  ///      //  //      ///   ///
+     //        ///  ///      //  //      ///   ///
+     //          ///         /////          ///
+```

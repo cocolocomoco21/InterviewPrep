@@ -4,7 +4,7 @@ This section contains mostly Leetcode practice problems completed in Java. Most 
 
 ## Review Problems
 Here is a decent suite of problems that can serve as a comprehensive pre-interview review of a range of topics:
-- Basic Calculator
+- Basic Calculator, Design Browser History
 - Coin Change
 - Find Median
 - House Robber II, Maximum Subarray
@@ -14,7 +14,7 @@ Here is a decent suite of problems that can serve as a comprehensive pre-intervi
 - Number of Islands
 - Product of Array Except Self
 - Two Sum
-- Unique Paths II, Climbing Stairs, Amazon: Robot Bounded in a Circle, CtCI - 8.1 (Triple Step)
+- Unique Paths II, Climbing Stairs, Amazon: Robot Bounded in a Circle, CtCI 8.1 (Triple Step), Maximum Profit in Job Scheduling
 - Course Schedule
 - Pacific Atlantic Water Flow
 - Maximum Path, Simple Tree
@@ -31,6 +31,7 @@ Here is a decent suite of problems divided by topic that can serve as a comprehe
 - Merge Intervals
 ### Stack:
 - Basic Calculator
+- Design Browser History
 ### Linked Lists:
 - Merge K Sorted Lists
 ### Heaps:
@@ -43,6 +44,7 @@ Here is a decent suite of problems divided by topic that can serve as a comprehe
 - Climbing Stairs, Amazon: Robot Bounded in a Circle
 - CtCI - 8.1 (Triple Step)
 - Coin Change
+- Maximum Profit in Job Scheduling
 ### Trees:
 - Maximum Path (simple DFS)
 - Same Tree (simple BFS)

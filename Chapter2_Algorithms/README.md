@@ -17,7 +17,7 @@
 4. Dynamic Programming
 5. Divide and Conquer
 6. Greedy Algorithms
-7. Dijkstra's
+7. Dijkstra's Algorithm
 
 #
 ## Complexity Summary
