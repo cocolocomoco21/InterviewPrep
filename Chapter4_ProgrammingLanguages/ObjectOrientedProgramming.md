@@ -36,6 +36,8 @@ Main tenents of OOP (**refer to each idea's specific chapter**):
 
 **Strengths**:
 - Logical representation of data is to organize by objects
+- Can handle complexity well by utilizing objects and breaking down large problems into dichotomy
+- Promote code reuse
 
 **Weaknesses**:
 - OOP may overemphasize software design and modeling (data/objects) at the expense of other important aspects (computation/algorithms)

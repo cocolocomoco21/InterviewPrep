@@ -1,10 +1,10 @@
 # Chapter 4: Programming Languages (in progress)
 ## Table of Contents
 1. Object Oriented Programming
+    - Abstraction
     - Encapsulation
     - Polymorphism
     - Inheritence
-    - Abstraction
     - Composition
 2. TODO
 3. TODO
