@@ -3,7 +3,7 @@
 
 In object-oriented programming, encapsulation is the idea of bundling (encapsulating) data and methods within one unit. In OOP, this manifests as puting data/attributes and methods into one class, and therefore one one object.
 
-Further, encapsulation is often used to hide the internal representation and organization of an object from the outside. The internal representation can be accessed via methods (e.g. Getters or Setters), and 
+Further, encapsulation is often used to hide the internal representation and organization of an object from the outside. The internal representation can be accessed via methods (e.g. Getters or Setters).
 
 ## More Details and Definitions
 
@@ -31,7 +31,7 @@ Abstraction vs. encapsulation:
 
 #
 ## Example uses
--  Refactoring - allowing author to change how objects represent their data internally without changing external code (as long as contract is kept the same)
+- Refactoring - allowing author to change how objects represent their data internally without changing external code (as long as contract is kept the same)
 - Getters and Setters for private variables
 
 #
