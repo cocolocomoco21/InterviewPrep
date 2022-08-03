@@ -3,11 +3,13 @@
 1. Object Oriented Programming
     - Abstraction
     - Encapsulation
-    - Polymorphism
     - Inheritence
+    - Polymorphism
     - Composition
-2. TODO
-3. TODO
+2. OOP in Java (TODO)
+3. Programming Languages
+    - Typing
+    - Paradigms (TODO)
 
 ### Coding language fundamentals
 - OOP
