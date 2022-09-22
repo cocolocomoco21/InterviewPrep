@@ -3,9 +3,9 @@ package com.cocolocomoco;
 public class Main {
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
-//        int[] prices = new int[] {7,1,5,3,6,4};
-        int[] prices = new int[] {7,6,4,3,1};
+        SolutionII solution = new SolutionII();
+        int[] prices = new int[] {7,1,5,3,6,4};
+//        int[] prices = new int[] {7,6,4,3,1};
 
 
         System.out.println(solution.maxProfit(prices));
@@ -43,5 +43,24 @@ class Solution {
         }
 
         return profit;
+    }
+}
+
+class SolutionII {
+    public int maxProfit(int[] prices) {
+        int maxProfit = 0;
+        int currentMin = Integer.MAX_VALUE;
+
+        for (int price : prices) {
+            if (price < currentMin) {
+                currentMin = price;
+            } else {
+                if (price - currentMin > maxProfit) {
+                    maxProfit = price - currentMin;
+                }
+            }
+        }
+
+        return maxProfit;
     }
 }
